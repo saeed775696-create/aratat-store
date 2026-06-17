@@ -1,0 +1,168 @@
+.hero {
+  position: relative;
+  height: calc(100dvh - var(--header-h));
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  transform: scale(1.05);
+  transition: transform 6s ease;
+}
+
+.hero:hover .hero-bg-img { transform: scale(1.08); }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to inline-end, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.hero-text {
+  max-width: 600px;
+  color: white;
+  padding: var(--space-8) 0;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-5);
+  backdrop-filter: blur(8px);
+}
+
+.hero-title {
+  font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-hero));
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--space-5);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-sub {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: var(--space-8);
+  max-width: 480px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-10);
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(12px);
+  width: fit-content;
+}
+
+.trust-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.trust-num { font-size: var(--font-size-xl); font-weight: 900; color: white; }
+.trust-label { font-size: var(--font-size-xs); opacity: 0.7; white-space: nowrap; }
+.trust-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.2); }
+
+/* Controls */
+.hero-ctrl {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  transition: all var(--dur-normal) var(--ease);
+  z-index: 5;
+}
+.hero-ctrl:hover { background: rgba(255,255,255,0.22); transform: translateY(-50%) scale(1.1); }
+.hero-prev { inset-inline-start: var(--space-6); }
+.hero-next { inset-inline-end: var(--space-6); }
+
+/* Dots */
+.hero-dots {
+  position: absolute;
+  bottom: var(--space-10);
+  inset-inline-start: 50%; transform: translateX(-50%);
+  display: flex; gap: var(--space-2);
+  z-index: 5;
+}
+.hero-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer; border: none;
+  transition: all var(--dur-normal) var(--ease);
+}
+.hero-dot.active {
+  width: 28px;
+  border-radius: var(--radius-full);
+  background: white;
+}
+
+/* Progress */
+.hero-progress {
+  position: absolute;
+  bottom: 0; inset-inline-start: 0; inset-inline-end: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.1);
+  z-index: 5;
+}
+.hero-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--red), var(--orange));
+  transform-origin: left;
+}
+[dir="rtl"] .hero-progress-bar { transform-origin: right; }
+
+@media (max-width: 768px) {
+  .hero { min-height: 480px; height: 80dvh; }
+  .hero-title { font-size: var(--font-size-2xl); }
+  .hero-sub { font-size: var(--font-size-md); }
+  .hero-ctas { gap: var(--space-3); }
+  .hero-trust { gap: var(--space-4); padding: var(--space-3) var(--space-4); }
+  .hero-ctrl { width: 38px; height: 38px; font-size: 18px; }
+}
+
+@media (max-width: 480px) {
+  .hero-trust { display: none; }
+  .hero-ctas .btn-lg { padding: var(--space-3) var(--space-5); font-size: var(--font-size-sm); }
+}

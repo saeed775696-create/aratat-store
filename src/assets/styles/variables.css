@@ -1,0 +1,102 @@
+/* ── ARATAT STORE — Design System Variables ─────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Almarai:wght@300;400;700;800&display=swap');
+
+:root {
+  /* Brand Colors */
+  --red:      #E63946;
+  --green:    #2D6A4F;
+  --teal:     #1AB5B5;
+  --orange:   #F4841F;
+  --purple:   #6B48FF;
+  --pink:     #FF4D6D;
+
+  /* Derived Palette */
+  --red-light:    #fff0f1;
+  --red-dark:     #b02535;
+  --green-light:  #e8f5ef;
+  --green-dark:   #1a4231;
+  --teal-light:   #e0f7f7;
+  --teal-dark:    #0d8585;
+  --orange-light: #fff4e8;
+  --orange-dark:  #c4660f;
+
+  /* Neutrals */
+  --white:    #ffffff;
+  --bg:       #f8f9fc;
+  --bg-card:  #ffffff;
+  --border:   #e8ecf0;
+  --border-2: #d1d9e0;
+  --text:     #1a1a2e;
+  --text-sec: #5a6474;
+  --text-muted: #9aa3af;
+  --overlay:  rgba(26,26,46,0.55);
+
+  /* Shadows */
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.10);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
+  --shadow-xl: 0 16px 60px rgba(0,0,0,0.20);
+  --shadow-card: 0 2px 12px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.03);
+  --shadow-colored: 0 8px 30px rgba(230,57,70,0.25);
+
+  /* Spacing */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Border Radius */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease:      cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:  cubic-bezier(0, 0, 0.2, 1);
+  --ease-in:   cubic-bezier(0.4, 0, 1, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:   150ms;
+  --dur-normal: 250ms;
+  --dur-slow:   400ms;
+
+  /* Typography */
+  --font:       'Cairo', 'Almarai', system-ui, sans-serif;
+  --font-size-xs:   12px;
+  --font-size-sm:   14px;
+  --font-size-md:   16px;
+  --font-size-lg:   18px;
+  --font-size-xl:   22px;
+  --font-size-2xl:  28px;
+  --font-size-3xl:  36px;
+  --font-size-4xl:  48px;
+  --font-size-hero: 64px;
+
+  /* Layout */
+  --container:    1280px;
+  --container-sm: 960px;
+  --header-h:     72px;
+  --sidebar-w:    280px;
+  --z-header:     100;
+  --z-modal:      200;
+  --z-toast:      300;
+  --z-float:      150;
+}
+
+/* Dark surfaces (used in hero, footer etc) */
+.surface-dark {
+  --bg-card: #1e2330;
+  --text:    #f0f2f5;
+  --text-sec:#adb5bd;
+  --border:  #2e3545;
+}

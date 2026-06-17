@@ -1,0 +1,93 @@
+// ─── Categories Data ─────────────────────────────────────────────────────
+const categories = [
+  {
+    id: 'kitchen',
+    slug: 'kitchen',
+    nameAr: 'أدوات المطبخ والتحضير',
+    nameEn: 'Kitchen & Prep Tools',
+    icon: '🍳',
+    color: '#E63946',
+    image: '/images/categories/kitchen.jpg',
+    subcategories: [
+      { id: 'juicers',    nameAr: 'العصارات والخلاطات',   nameEn: 'Juicers & Blenders'   },
+      { id: 'choppers',   nameAr: 'قطاعات الخضروات',      nameEn: 'Vegetable Choppers'   },
+      { id: 'pots',       nameAr: 'أواني الطبخ',           nameEn: 'Pots & Pans'          },
+      { id: 'handtools',  nameAr: 'الأدوات اليدوية',      nameEn: 'Hand Tools'           },
+      { id: 'baking',     nameAr: 'أدوات الخبز',           nameEn: 'Baking Tools'         },
+    ],
+  },
+  {
+    id: 'party',
+    slug: 'party',
+    nameAr: 'توزيعات الحفلات والمناسبات',
+    nameEn: 'Party Favors & Occasions',
+    icon: '🎉',
+    color: '#F4841F',
+    image: '/images/categories/party.jpg',
+    subcategories: [
+      { id: 'birthdays',   nameAr: 'أعياد الميلاد',         nameEn: 'Birthdays'           },
+      { id: 'graduation',  nameAr: 'حفلات التخرج',          nameEn: 'Graduations'         },
+      { id: 'family',      nameAr: 'المناسبات العائلية',    nameEn: 'Family Gatherings'   },
+      { id: 'candy',       nameAr: 'مستلزمات الحلويات',    nameEn: 'Candy & Treats'      },
+    ],
+  },
+  {
+    id: 'hospitality',
+    slug: 'hospitality',
+    nameAr: 'مستلزمات الضيافة والتقديم',
+    nameEn: 'Hospitality & Serving',
+    icon: '☕',
+    color: '#1AB5B5',
+    image: '/images/categories/hospitality.jpg',
+    subcategories: [
+      { id: 'tea-coffee', nameAr: 'أطقم الشاي والقهوة',   nameEn: 'Tea & Coffee Sets'   },
+      { id: 'cups',       nameAr: 'الكاسات والأكواب',     nameEn: 'Cups & Tumblers'     },
+      { id: 'plates',     nameAr: 'الصحون والطاولات',     nameEn: 'Plates & Trays'      },
+      { id: 'pitchers',   nameAr: 'أباريق وصواني',        nameEn: 'Pitchers & Trays'    },
+    ],
+  },
+  {
+    id: 'gifts',
+    slug: 'gifts',
+    nameAr: 'الهدايا والتوزيعات المدرسية',
+    nameEn: 'Gifts & School Favors',
+    icon: '🎁',
+    color: '#2D6A4F',
+    image: '/images/categories/gifts.jpg',
+    subcategories: [
+      { id: 'bundles',  nameAr: 'مجموعات الهدايا الجاهزة', nameEn: 'Ready Gift Bundles' },
+      { id: 'toys',     nameAr: 'ألعاب صغيرة للأطفال',     nameEn: 'Small Toys for Kids' },
+      { id: 'supplies', nameAr: 'لوازم المكاتب',            nameEn: 'School Supplies'    },
+    ],
+  },
+  {
+    id: 'home',
+    slug: 'home',
+    nameAr: 'لوازم المنزل والديكور',
+    nameEn: 'Home Essentials & Decor',
+    icon: '🏡',
+    color: '#6B48FF',
+    image: '/images/categories/home.jpg',
+    subcategories: [
+      { id: 'cleaning',  nameAr: 'أدوات النظافة',          nameEn: 'Cleaning Supplies'    },
+      { id: 'decor',     nameAr: 'ديكورات المنزل',          nameEn: 'Home Decor'           },
+      { id: 'storage',   nameAr: 'التخزين والتنظيم',       nameEn: 'Storage & Organization'},
+    ],
+  },
+  {
+    id: 'offers',
+    slug: 'offers',
+    nameAr: 'العروض الحصرية والتخفيضات',
+    nameEn: 'Exclusive Offers & Deals',
+    icon: '🔥',
+    color: '#FF4D6D',
+    image: '/images/categories/offers.jpg',
+    subcategories: [
+      { id: 'bulk',     nameAr: 'عروض الكمية',             nameEn: 'Bulk Offers'          },
+      { id: 'bundles2', nameAr: 'مجموعات العرطات الشاملة', nameEn: 'Complete Aratat Bundles'},
+      { id: 'flash',    nameAr: 'التخفيضات اليومية',       nameEn: 'Daily Flash Sales'    },
+    ],
+  },
+];
+
+export default categories;
