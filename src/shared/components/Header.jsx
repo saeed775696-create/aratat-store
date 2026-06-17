@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiShoppingCart, FiSearch, FiPhone, FiGlobe, FiMenu, FiX, FiPackage } from 'react-icons/fi';
+import { FaAndroid } from 'react-icons/fa';
 import { useLanguage } from '../../i18n/LanguageContext.jsx';
 import { useCartStore } from '../store/stores.js';
 import { STORE_CONFIG } from '../../config.js';
@@ -88,6 +89,21 @@ export default function Header() {
             >
               <FiPhone aria-hidden />
               {STORE_CONFIG.whatsapp.displayPrimary}
+            </a>
+
+            {/* Download App */}
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.alfakhm.store" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn btn-sm" 
+              style={{ background: '#3DDC84', color: '#fff', borderColor: '#3DDC84', padding: '0 12px' }}
+              title={lang === 'ar' ? 'تحميل التطبيق' : 'Download App'}
+            >
+              <FaAndroid size={18} />
+              <span style={{ marginInlineStart: '6px', fontWeight: 700, display: 'none' }} className="d-none d-lg-inline">
+                {lang === 'ar' ? 'التطبيق' : 'App'}
+              </span>
             </a>
 
             {/* Language toggle */}

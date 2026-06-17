@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaWhatsapp, FaInstagram, FaFacebook, FaPhone } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaFacebook, FaPhone, FaAndroid } from 'react-icons/fa';
 import { useLanguage } from '../../i18n/LanguageContext.jsx';
 import { STORE_CONFIG } from '../../config.js';
 import './Footer.css';
@@ -88,6 +88,13 @@ export default function Footer() {
           <div className="footer-col">
             <h3 className="footer-col-title">{t('footer.followUs')}</h3>
             <div className="footer-follow-links">
+              <a href="https://play.google.com/store/apps/details?id=com.alfakhm.store" target="_blank" rel="noreferrer" className="follow-card" style={{ background: 'rgba(61, 220, 132, 0.1)', borderColor: 'rgba(61, 220, 132, 0.2)' }}>
+                <FaAndroid className="follow-icon" style={{ color: '#3DDC84' }} />
+                <div>
+                  <div className="follow-name">{lang === 'ar' ? 'حمل التطبيق' : 'Download App'}</div>
+                  <div className="follow-handle">Google Play</div>
+                </div>
+              </a>
               <a href={STORE_CONFIG.social.instagram} target="_blank" rel="noreferrer" className="follow-card">
                 <FaInstagram className="follow-icon" style={{ color: '#E1306C' }} />
                 <div>

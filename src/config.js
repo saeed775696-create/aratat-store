@@ -8,11 +8,11 @@ export const STORE_CONFIG = {
   taglineEn: 'Abundance · Quality · Speed',
 
   whatsapp: {
-    primary:   '967775234881',
-    secondary: '967735464235',
+    primary:   '967735464235',
+    secondary: '967775234881',
     tertiary:  '967993030733',
-    displayPrimary:   '775 234 881',
-    displaySecondary: '735 464 235',
+    displayPrimary:   '735 464 235',
+    displaySecondary: '775 234 881',
     displayTertiary:  '993 030 733',
   },
 
@@ -33,10 +33,13 @@ export const STORE_CONFIG = {
 
 // ─── WhatsApp message builder ──────────────────────────────────────────────
 export const buildWhatsAppMessage = (product, lang = 'ar') => {
+  const name = lang === 'ar' ? product.nameAr : product.nameEn;
+  const price = product.price.toLocaleString();
+  
   if (lang === 'ar') {
-    return `مرحباً، أريد طلب:\n🛒 المنتج: ${product.nameAr}\n💰 السعر: ${product.price} ريال\n🔗 رقم المنتج: #${product.id}`;
+    return `مرحباً، أرغب في شراء ${name} بسعر ${price}. أرجو تأكيد التوفر والتوصيل.`;
   }
-  return `Hello, I'd like to order:\n🛒 Product: ${product.nameEn}\n💰 Price: ${product.price} YER\n🔗 Product #: #${product.id}`;
+  return `Hello, I would like to purchase ${name} for ${price}. Please confirm availability and delivery.`;
 };
 
 // ─── WhatsApp order summary builder ───────────────────────────────────────
